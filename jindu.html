@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Aimer </title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/prefixfree.min.js"></script>
+	<style>
+		#qqq {
+			position: absolute;
+		}
+
+		a {
+			font-size: 18px;
+			position: relative;
+			top: 80px;
+			text-decoration: none;
+			color: #8aaaff;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="loader">
+		<progress id='p' value='0' max='100'></progress>
+		<output for='p'></output>
+	</div>
+	<div id="qqq"><a href="index.html">准备好了吗</a></div>
+
+
+
+
+	<script src="js/script.js"></script>
+	<script>
+		var a = document.querySelector('a');
+		var val = document.querySelector('#p')
+		a.onclick = function () {
+			location.href = 'index.html';
+		}
+
+		console.log(val.value);
+		setInterval(function () {
+			if (val.value == 100) {
+				a.onclick();
+			}
+		}, 100)
+	</script>
+
+</body>
+
+</html>
